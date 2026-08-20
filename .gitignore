@@ -1,0 +1,36 @@
+# Local Terraform directory (plugins, modules cache)
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files & backups (S3 backend is used, so local state must not be committed)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform variable overrides and secrets
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration
+.terraformrc
+terraform.rc
+
+# OS and IDE files
+.DS_Store
+.idea/
+.vscode/
+
+# Virtual environment directories
+venv/
+.venv/
+
+# Secret files
+secrets.tf
+.env
