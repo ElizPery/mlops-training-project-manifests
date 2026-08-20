@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: oci://registry-1.docker.io/bitnamicharts
+    repoURL: registry-1.docker.io/bitnamicharts
     chart: minio
-    targetRevision: 14.6.1
+    targetRevision: 17.0.21
     helm:
       valuesObject:
         auth:
