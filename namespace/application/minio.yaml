@@ -11,6 +11,10 @@ spec:
     targetRevision: 14.6.0
     helm:
       valuesObject:
+        image:
+          registry: docker.io
+          repository: bitnami/minio
+          tag: 2024.11.7-debian-12-r0
         auth:
           rootUser: minio
           rootPassword: minio123
