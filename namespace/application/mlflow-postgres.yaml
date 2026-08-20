@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    rrepoURL: registry-1.docker.io/bitnamicharts
+    repoURL: oci://registry-1.docker.io/bitnamicharts
     chart: postgresql
     targetRevision: 16.7.0
     helm:
@@ -14,6 +14,7 @@ spec:
         auth:
           username: mlflow
           password: mlflowpass
+          postgresPassword: mlflowpass
           database: mlflow
         primary:
           persistence:
