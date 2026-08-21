@@ -30,7 +30,7 @@ os.environ["MLFLOW_S3_ENDPOINT_URL"] = MLFLOW_S3_ENDPOINT_URL
 
 # Set MLflow Tracking URI
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-EXPERIMENT_NAME = "iris-classification-grid-search"
+EXPERIMENT_NAME = "iris-classification-grid-search-v1"
 mlflow.set_experiment(EXPERIMENT_NAME)
 
 # Load Dataset

@@ -11,6 +11,9 @@ The Argo CD `ApplicationSet` is configured to track the `namespace/*` directory.
 ```text
 mlops-training-project-manifests/
 ├── namespace/
+│   ├── experiments/
+│   │   ├── requirements.txt 
+│   │   └── train_and_push.py
 │   ├── application/
 │   │   ├── ns.yaml          # Creates the 'application' namespace
 │   │   ├── minio.yaml
@@ -21,6 +24,7 @@ mlops-training-project-manifests/
 │   │   ├── kube-prometheus-stack.yaml 
 │   │   ├── loki.yaml 
 │   │   └── ns.yaml          # Namespace for system/infrastructure tools
+├── .gitignore
 └── README.md
 ```
 
@@ -62,7 +66,7 @@ kubectl port-forward svc/mlflow -n application 5000:5000
 kubectl port-forward svc/minio -n application 9000:9000
 
 # Prometheus PushGateway (namespace: monitoring)
-kubectl port-forward svc/prometheus-pushgateway -n monitoring 9091:9091
+kubectl port-forward svc/pushgateway-prometheus-pushgateway -n monitoring 9091:9091
 
 # Grafana UI (namespace: infra-tools)
 kubectl port-forward svc/prometheus-operator-grafana -n infra-tools 3000:80
@@ -157,3 +161,17 @@ terraform destroy
 cd ../vpc
 terraform destroy 
 ```
+
+---
+
+## Screenshot of expected outcome in MLFlow and ArgoCD
+
+![alt text](screenshots/image.png)
+
+![alt text](screenshots/image_1.png)
+
+![alt text](screenshots/image_2.png)
+
+![alt text](screenshots/image_3.png)
+
+![alt text](screenshots/image_4.png)
