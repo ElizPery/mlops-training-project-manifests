@@ -54,7 +54,7 @@ spec:
             - name: Prometheus
               type: prometheus
               uid: prometheus 
-              url: https://prometheus-operator-prometheus.infra-tools:9090
+              url: http://prometheus-operator-prometheus.infra-tools:9090
               access: proxy
               isDefault: true         
 
